@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		276EC8131AB8A3DF005194F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EC8121AB8A3DF005194F1 /* AppDelegate.swift */; };
+		276EC8151AB8A3DF005194F1 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EC8141AB8A3DF005194F1 /* Document.swift */; };
+		276EC8181AB8A3DF005194F1 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276EC8161AB8A3DF005194F1 /* Document.xib */; };
+		276EC81A1AB8A3DF005194F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276EC8191AB8A3DF005194F1 /* Images.xcassets */; };
+		276EC81D1AB8A3DF005194F1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276EC81B1AB8A3DF005194F1 /* MainMenu.xib */; };
+		276EC8291AB8A3DF005194F1 /* ArgusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EC8281AB8A3DF005194F1 /* ArgusTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		276EC8231AB8A3DF005194F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 276EC8051AB8A3DF005194F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 276EC80C1AB8A3DF005194F1;
+			remoteInfo = Argus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		276EC80D1AB8A3DF005194F1 /* Argus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Argus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		276EC8111AB8A3DF005194F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276EC8121AB8A3DF005194F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		276EC8141AB8A3DF005194F1 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		276EC8171AB8A3DF005194F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
+		276EC8191AB8A3DF005194F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		276EC81C1AB8A3DF005194F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		276EC8221AB8A3DF005194F1 /* ArgusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		276EC8271AB8A3DF005194F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276EC8281AB8A3DF005194F1 /* ArgusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgusTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		276EC80A1AB8A3DF005194F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276EC81F1AB8A3DF005194F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		276EC8041AB8A3DF005194F1 = {
+			isa = PBXGroup;
+			children = (
+				276EC80F1AB8A3DF005194F1 /* Argus */,
+				276EC8251AB8A3DF005194F1 /* ArgusTests */,
+				276EC80E1AB8A3DF005194F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		276EC80E1AB8A3DF005194F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				276EC80D1AB8A3DF005194F1 /* Argus.app */,
+				276EC8221AB8A3DF005194F1 /* ArgusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		276EC80F1AB8A3DF005194F1 /* Argus */ = {
+			isa = PBXGroup;
+			children = (
+				276EC8121AB8A3DF005194F1 /* AppDelegate.swift */,
+				276EC8141AB8A3DF005194F1 /* Document.swift */,
+				276EC8161AB8A3DF005194F1 /* Document.xib */,
+				276EC8191AB8A3DF005194F1 /* Images.xcassets */,
+				276EC81B1AB8A3DF005194F1 /* MainMenu.xib */,
+				276EC8101AB8A3DF005194F1 /* Supporting Files */,
+			);
+			path = Argus;
+			sourceTree = "<group>";
+		};
+		276EC8101AB8A3DF005194F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				276EC8111AB8A3DF005194F1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		276EC8251AB8A3DF005194F1 /* ArgusTests */ = {
+			isa = PBXGroup;
+			children = (
+				276EC8281AB8A3DF005194F1 /* ArgusTests.swift */,
+				276EC8261AB8A3DF005194F1 /* Supporting Files */,
+			);
+			path = ArgusTests;
+			sourceTree = "<group>";
+		};
+		276EC8261AB8A3DF005194F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				276EC8271AB8A3DF005194F1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		276EC80C1AB8A3DF005194F1 /* Argus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276EC82C1AB8A3DF005194F1 /* Build configuration list for PBXNativeTarget "Argus" */;
+			buildPhases = (
+				276EC8091AB8A3DF005194F1 /* Sources */,
+				276EC80A1AB8A3DF005194F1 /* Frameworks */,
+				276EC80B1AB8A3DF005194F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Argus;
+			productName = Argus;
+			productReference = 276EC80D1AB8A3DF005194F1 /* Argus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		276EC8211AB8A3DF005194F1 /* ArgusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276EC82F1AB8A3DF005194F1 /* Build configuration list for PBXNativeTarget "ArgusTests" */;
+			buildPhases = (
+				276EC81E1AB8A3DF005194F1 /* Sources */,
+				276EC81F1AB8A3DF005194F1 /* Frameworks */,
+				276EC8201AB8A3DF005194F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				276EC8241AB8A3DF005194F1 /* PBXTargetDependency */,
+			);
+			name = ArgusTests;
+			productName = ArgusTests;
+			productReference = 276EC8221AB8A3DF005194F1 /* ArgusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		276EC8051AB8A3DF005194F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Cocode;
+				TargetAttributes = {
+					276EC80C1AB8A3DF005194F1 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					276EC8211AB8A3DF005194F1 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 276EC80C1AB8A3DF005194F1;
+					};
+				};
+			};
+			buildConfigurationList = 276EC8081AB8A3DF005194F1 /* Build configuration list for PBXProject "Argus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 276EC8041AB8A3DF005194F1;
+			productRefGroup = 276EC80E1AB8A3DF005194F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				276EC80C1AB8A3DF005194F1 /* Argus */,
+				276EC8211AB8A3DF005194F1 /* ArgusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		276EC80B1AB8A3DF005194F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276EC8181AB8A3DF005194F1 /* Document.xib in Resources */,
+				276EC81A1AB8A3DF005194F1 /* Images.xcassets in Resources */,
+				276EC81D1AB8A3DF005194F1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276EC8201AB8A3DF005194F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		276EC8091AB8A3DF005194F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276EC8151AB8A3DF005194F1 /* Document.swift in Sources */,
+				276EC8131AB8A3DF005194F1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276EC81E1AB8A3DF005194F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276EC8291AB8A3DF005194F1 /* ArgusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		276EC8241AB8A3DF005194F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 276EC80C1AB8A3DF005194F1 /* Argus */;
+			targetProxy = 276EC8231AB8A3DF005194F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		276EC8161AB8A3DF005194F1 /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				276EC8171AB8A3DF005194F1 /* Base */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		276EC81B1AB8A3DF005194F1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				276EC81C1AB8A3DF005194F1 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		276EC82A1AB8A3DF005194F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		276EC82B1AB8A3DF005194F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		276EC82D1AB8A3DF005194F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Argus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		276EC82E1AB8A3DF005194F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Argus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		276EC8301AB8A3DF005194F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ArgusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Argus.app/Contents/MacOS/Argus";
+			};
+			name = Debug;
+		};
+		276EC8311AB8A3DF005194F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ArgusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Argus.app/Contents/MacOS/Argus";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		276EC8081AB8A3DF005194F1 /* Build configuration list for PBXProject "Argus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276EC82A1AB8A3DF005194F1 /* Debug */,
+				276EC82B1AB8A3DF005194F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		276EC82C1AB8A3DF005194F1 /* Build configuration list for PBXNativeTarget "Argus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276EC82D1AB8A3DF005194F1 /* Debug */,
+				276EC82E1AB8A3DF005194F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		276EC82F1AB8A3DF005194F1 /* Build configuration list for PBXNativeTarget "ArgusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276EC8301AB8A3DF005194F1 /* Debug */,
+				276EC8311AB8A3DF005194F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 276EC8051AB8A3DF005194F1 /* Project object */;
+}
