@@ -9,13 +9,17 @@
 import Cocoa
 
 class Document: NSDocument {
+  var content:String?
+  @IBOutlet var textView:NSTextView?
+
   override init() {
     super.init()
   }
 
   override func windowControllerDidLoadNib(aController: NSWindowController) {
     super.windowControllerDidLoadNib(aController)
-    // Add any code here that needs to be executed once the windowController has loaded the document's window.
+
+    textView?.string = content
   }
 
   override class func autosavesInPlace() -> Bool {
@@ -23,8 +27,6 @@ class Document: NSDocument {
   }
 
   override var windowNibName: String? {
-    // Returns the nib file name of the document
-    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this property and override -makeWindowControllers instead.
     return "Document"
   }
 
@@ -36,9 +38,11 @@ class Document: NSDocument {
   }
 
   override func readFromData(data: NSData, ofType typeName: String, error outError: NSErrorPointer) -> Bool {
-    // Insert code here to read your document from the given data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning false.
-    // You can also choose to override readFromFileWrapper:ofType:error: or readFromURL:ofType:error: instead.
-    // If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
+    if let content = NSString(data:data, encoding: NSUTF8StringEncoding) {
+      self.content = content as String
+      return true
+    }
+
     outError.memory = NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     return false
   }
