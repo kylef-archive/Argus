@@ -63,7 +63,9 @@
 				276EC8251AB8A3DF005194F1 /* ArgusTests */,
 				276EC80E1AB8A3DF005194F1 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		276EC80E1AB8A3DF005194F1 /* Products */ = {
 			isa = PBXGroup;
