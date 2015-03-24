@@ -8,7 +8,8 @@
 
 import Cocoa
 
-class Document: NSDocument {
+
+class Document: NSDocument, NSTextStorageDelegate {
   var content:String?
   @IBOutlet var textView:NSTextView?
 
@@ -20,6 +21,8 @@ class Document: NSDocument {
     super.windowControllerDidLoadNib(aController)
 
     textView?.string = content
+    textView?.textStorage?.delegate = self
+    textView?.textStorage?.font = NSFont(name: "Menlo", size: 15)
   }
 
   override class func autosavesInPlace() -> Bool {
@@ -45,5 +48,23 @@ class Document: NSDocument {
 
     outError.memory = NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     return false
+  }
+
+  // MARK: NSTextStorageDelegate
+
+  func textStorageDidProcessEditing(notification: NSNotification) {
+    content = textView?.string
+    let storage = textView!.textStorage!
+    var index = 0
+
+    for character in content! {
+      let range = NSMakeRange(index, 1)
+
+      if contains(["[", "]", "{", "}", ",", ":"], character) {
+        storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.grayColor(), range: range)
+      }
+
+      ++index
+    }
   }
 }
