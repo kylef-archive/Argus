@@ -10,12 +10,15 @@ import Cocoa
 
 
 class Document: NSDocument, NSTextStorageDelegate {
-  var content:String?
-  @IBOutlet var textView:NSTextView?
-
-  override init() {
-    super.init()
+  var content:String = "" {
+    didSet {
+      if let textView = textView {
+        textView.string = content
+      }
+    }
   }
+
+  @IBOutlet var textView:NSTextView?
 
   override func windowControllerDidLoadNib(aController: NSWindowController) {
     super.windowControllerDidLoadNib(aController)
@@ -23,6 +26,10 @@ class Document: NSDocument, NSTextStorageDelegate {
     textView?.string = content
     textView?.textStorage?.delegate = self
     textView?.textStorage?.font = NSFont(name: "Menlo", size: 15)
+    textView?.automaticDashSubstitutionEnabled = false
+    textView?.automaticQuoteSubstitutionEnabled = false
+
+    textView?.textContainerInset = NSSize(width: 10, height: 15)
   }
 
   override class func autosavesInPlace() -> Bool {
@@ -34,7 +41,7 @@ class Document: NSDocument, NSTextStorageDelegate {
   }
 
   override func dataOfType(typeName: String, error outError: NSErrorPointer) -> NSData? {
-    return content?.dataUsingEncoding(NSUTF8StringEncoding)
+    return content.dataUsingEncoding(NSUTF8StringEncoding)
   }
 
   override func readFromData(data: NSData, ofType typeName: String, error outError: NSErrorPointer) -> Bool {
@@ -50,18 +57,68 @@ class Document: NSDocument, NSTextStorageDelegate {
   // MARK: NSTextStorageDelegate
 
   func textStorageDidProcessEditing(notification: NSNotification) {
-    content = textView?.string
     let storage = textView!.textStorage!
     var index = 0
+    var insideString = false
+    var escaped = false
+    content = textView?.string ?? ""
 
-    for character in content! {
+    storage.enumerateAttribute(NSForegroundColorAttributeName, inRange: NSMakeRange(0, content.utf16Count), options: NSAttributedStringEnumerationOptions(0)) { (attribute, range, stop) in
+      if let attribute = attribute as? String {
+        storage.removeAttribute(attribute, range: range)
+      }
+    }
+
+    for character in content {
       let range = NSMakeRange(index, 1)
 
-      if contains(["[", "]", "{", "}", ",", ":"], character) {
+      if character == "\"" && !escaped {
+        insideString = !insideString
+        storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.redColor(), range: range)
+
+        if !insideString {
+          escaped = false
+        }
+      } else if insideString {
+        if character == "\\" && !escaped {
+          escaped = true
+        } else {
+          escaped = false
+        }
+        storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.blueColor(), range: range)
+      } else if contains(["n", "u", "l", "t", "r", "e", "f", "a", "s"], character) {
+        storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.purpleColor(), range: range)
+      } else if contains([".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], character) {
+        storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.greenColor(), range: range)
+      } else if contains(["[", "]", "{", "}", ",", ":"], character) {
         storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.grayColor(), range: range)
       }
 
       ++index
     }
+  }
+
+  // MARK:
+
+  func encodeJSON(options:NSJSONWritingOptions) {
+    if let data = dataOfType("", error: nil) {
+      var error:NSError?
+
+      if let object: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error) {
+        if let data = NSJSONSerialization.dataWithJSONObject(object, options: options, error: nil) {
+          readFromData(data, ofType: "", error: nil)
+        }
+      } else {
+        println("Failed to re-encode \(error)")
+      }
+    }
+  }
+
+  @IBAction func prettifyJSON(sender:AnyObject) {
+    encodeJSON(.PrettyPrinted)
+  }
+
+  @IBAction func uglifyJSON(sender:AnyObject) {
+    encodeJSON(NSJSONWritingOptions(0))
   }
 }
