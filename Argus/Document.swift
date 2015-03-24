@@ -29,6 +29,7 @@ class Document: NSDocument, NSTextStorageDelegate {
     textView?.automaticDashSubstitutionEnabled = false
     textView?.automaticQuoteSubstitutionEnabled = false
     textView?.automaticSpellingCorrectionEnabled = false
+    textView?.continuousSpellCheckingEnabled = false
 
     textView?.textContainerInset = NSSize(width: 10, height: 15)
   }
