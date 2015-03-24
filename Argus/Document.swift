@@ -28,6 +28,7 @@ class Document: NSDocument, NSTextStorageDelegate {
     textView?.textStorage?.font = NSFont(name: "Menlo", size: 15)
     textView?.automaticDashSubstitutionEnabled = false
     textView?.automaticQuoteSubstitutionEnabled = false
+    textView?.automaticSpellingCorrectionEnabled = false
 
     textView?.textContainerInset = NSSize(width: 10, height: 15)
   }
