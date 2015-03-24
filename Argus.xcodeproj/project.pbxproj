@@ -411,6 +411,7 @@
 				276EC82E1AB8A3DF005194F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		276EC82F1AB8A3DF005194F1 /* Build configuration list for PBXNativeTarget "ArgusTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				276EC8311AB8A3DF005194F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
