@@ -63,6 +63,7 @@ class Document: NSDocument, NSTextStorageDelegate {
     var index = 0
     var insideString = false
     var escaped = false
+    var key = false
     content = textView?.string ?? ""
 
     storage.enumerateAttribute(NSForegroundColorAttributeName, inRange: NSMakeRange(0, content.utf16Count), options: NSAttributedStringEnumerationOptions(0)) { (attribute, range, stop) in
@@ -87,12 +88,22 @@ class Document: NSDocument, NSTextStorageDelegate {
         } else {
           escaped = false
         }
-        storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.blueColor(), range: range)
+        var color = NSColor.blueColor()
+        if key {
+          color = NSColor.grayColor()
+        }
+        storage.addAttribute(NSForegroundColorAttributeName, value: color, range: range)
       } else if contains(["n", "u", "l", "t", "r", "e", "f", "a", "s"], character) {
         storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.purpleColor(), range: range)
       } else if contains([".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], character) {
         storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.greenColor(), range: range)
       } else if contains(["[", "]", "{", "}", ",", ":"], character) {
+        if contains(["{", ","], character) {
+          key = true
+        } else if character == ":" {
+          key = false
+        }
+
         storage.addAttribute(NSForegroundColorAttributeName, value: NSColor.grayColor(), range: range)
       }
 
